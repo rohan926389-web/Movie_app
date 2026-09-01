@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Hub</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: #0b0b0b;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      background: #151515;
+      padding: 18px 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      color: #e50914;
+      font-size: 25px;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 15px;
+    }
+
+    .hero {
+      padding: 80px 7%;
+      min-height: 380px;
+      background: linear-gradient(90deg, #000, #222, #000);
+    }
+
+    .hero h1 {
+      font-size: 45px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      color: #ccc;
+      max-width: 500px;
+      margin-bottom: 25px;
+    }
+
+    .btn {
+      background: #e50914;
+      color: white;
+      padding: 12px 22px;
+      text-decoration: none;
+      border-radius: 5px;
+      display: inline-block;
+    }
+
+    .section {
+      padding: 35px 6%;
+    }
+
+    .movies {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .movie {
+      background: #181818;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .poster {
+      height: 230px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 55px;
+      background: linear-gradient(135deg, #333, #111);
+    }
+
+    .info {
+      padding: 15px;
+    }
+
+    .info p {
+      color: #aaa;
+      margin-top: 7px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: #151515;
+      color: #888;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">🎬 MovieHub</div>
+
+    <nav>
+      <a href="#">Home</a>
+      <a href="#movies">Movies</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Welcome to MovieHub</h1>
+    <p>
+      Watch trailers and discover your favourite movies in one place.
+    </p>
+    <a href="#movies" class="btn">Explore Movies</a>
+  </section>
+
+  <section class="section" id="movies">
+    <h2>🔥 Popular Movies</h2>
+
+    <div class="movies">
+
+      <div class="movie">
+        <div class="poster">🎬</div>
+        <div class="info">
+          <h3>Action Movie</h3>
+          <p>Action • 2026</p>
+        </div>
+      </div>
+
+      <div class="movie">
+        <div class="poster">🍿</div>
+        <div class="info">
+          <h3>Comedy Movie</h3>
+          <p>Comedy • 2026</p>
+        </div>
+      </div>
+
+      <div class="movie">
+        <div class="poster">🚀</div>
+        <div class="info">
+          <h3>Sci-Fi Movie</h3>
+          <p>Sci-Fi • 2026</p>
+        </div>
+      </div>
+
+      <div class="movie">
+        <div class="poster">👻</div>
+        <div class="info">
+          <h3>Horror Movie</h3>
+          <p>Horror • 2026</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <h2>About</h2>
+    <p>Welcome to MovieHub — your movie discovery website.</p>
+  </section>
+
+  <footer>
+    © 2026 MovieHub
+  </footer>
+
+</body>
+</html>
