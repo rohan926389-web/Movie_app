@@ -1,8 +1,10 @@
->
+<!DOCTYPE html>
+<html lang="en">
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>MovieHub</title>
+  <title>My Movie Website</title>
 
   <style>
     * {
@@ -12,98 +14,156 @@
     }
 
     body {
-      font-family: Arial, sans-serif;
-      background: #0b0b0b;
+      background: #111;
       color: white;
+      font-family: Arial, sans-serif;
     }
 
     header {
-      background: #151515;
+      background: #e50914;
       padding: 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      text-align: center;
     }
 
-    .logo {
-      color: #e50914;
+    header h1 {
       font-size: 28px;
-      font-weight: bold;
+    }
+
+    nav {
+      background: #222;
+      padding: 12px;
+      text-align: center;
     }
 
     nav a {
       color: white;
       text-decoration: none;
-      margin-left: 18px;
+      margin: 0 10px;
+      font-weight: bold;
     }
 
     .hero {
-      padding: 80px 20px;
+      padding: 50px 20px;
       text-align: center;
-      background: linear-gradient(135deg, #222, #050505);
+      background: linear-gradient(135deg, #222, #000);
     }
 
-    .hero h1 {
-      font-size: 48px;
-      margin-bottom: 20px;
+    .hero h2 {
+      font-size: 32px;
+      margin-bottom: 10px;
     }
 
     .hero p {
       color: #ccc;
-      font-size: 18px;
-      margin-bottom: 30px;
-    }
-
-    .button {
-      display: inline-block;
-      background: #e50914;
-      color: white;
-      padding: 14px 22px;
-      border-radius: 6px;
-      text-decoration: none;
     }
 
     .movies {
-      padding: 50px 20px;
+      padding: 25px 15px;
     }
 
     .movies h2 {
-      font-size: 32px;
-      margin-bottom: 30px;
-    }
-
-    .search {
-      width: 100%;
-      max-width: 500px;
-      padding: 15px;
-      border: none;
-      border-radius: 6px;
-      margin-bottom: 30px;
-      font-size: 16px;
+      margin-bottom: 20px;
     }
 
     .movie-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
       gap: 20px;
     }
 
     .movie {
-      background: #191919;
+      background: #222;
       border-radius: 10px;
       overflow: hidden;
+      padding-bottom: 15px;
+      text-align: center;
     }
 
     .poster {
-      height: 260px;
-      background: #292929;
+      height: 240px;
+      background: #333;
       display: flex;
-      justify-content: center;
       align-items: center;
-      font-size: 70px;
+      justify-content: center;
+      color: #aaa;
+      font-size: 18px;
     }
 
-    .movie-info {
-      padding: 18px;
+    .movie h3 {
+      margin: 12px 5px;
     }
-    
+
+    .watch {
+      display: inline-block;
+      background: #e50914;
+      color: white;
+      padding: 9px 18px;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+
+    footer {
+      margin-top: 30px;
+      padding: 20px;
+      text-align: center;
+      background: #222;
+      color: #aaa;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>🎬 My Movie Website</h1>
+  </header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#movies">Movies</a>
+    <a href="#about">About</a>
+  </nav>
+
+  <section class="hero">
+    <h2>Welcome to My Movie Website</h2>
+    <p>Watch and explore your favourite movies.</p>
+  </section>
+
+  <section class="movies" id="movies">
+    <h2>🔥 Latest Movies</h2>
+
+    <div class="movie-grid">
+
+      <div class="movie">
+        <div class="poster">Movie Poster</div>
+        <h3>Movie 1</h3>
+        <a class="watch" href="#">Watch</a>
+      </div>
+
+      <div class="movie">
+        <div class="poster">Movie Poster</div>
+        <h3>Movie 2</h3>
+        <a class="watch" href="#">Watch</a>
+      </div>
+
+      <div class="movie">
+        <div class="poster">Movie Poster</div>
+        <h3>Movie 3</h3>
+        <a class="watch" href="#">Watch</a>
+      </div>
+
+      <div class="movie">
+        <div class="poster">Movie Poster</div>
+        <h3>Movie 4</h3>
+        <a class="watch" href="#">Watch</a>
+      </div>
+
+    </div>
+  </section>
+
+  <footer id="about">
+    <p>© 2026 My Movie Website</p>
+  </footer>
+
+</body>
+</html>
