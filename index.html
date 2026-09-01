@@ -1,122 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>MovieHub</title>
+  <title>MovieHub</title>
 
-<style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-body{
-  background:#080808;
-  color:white;
-  font-family:Arial,sans-serif;
-}
+    body {
+      font-family: Arial, sans-serif;
+      background: #0b0b0b;
+      color: white;
+    }
 
-/* HEADER */
-header{
-  background:#151515;
-  padding:18px 6%;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  position:sticky;
-  top:0;
-  z-index:100;
-}
+    header {
+      background: #151515;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-.logo{
-  color:#e50914;
-  font-size:30px;
-  font-weight:bold;
-}
+    .logo {
+      color: #e50914;
+      font-size: 28px;
+      font-weight: bold;
+    }
 
-nav a{
-  color:white;
-  text-decoration:none;
-  margin-left:20px;
-  font-size:17px;
-}
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 18px;
+    }
 
-nav a:hover{
-  color:#e50914;
-}
+    .hero {
+      padding: 80px 20px;
+      text-align: center;
+      background: linear-gradient(135deg, #222, #050505);
+    }
 
-/* HERO */
-.hero{
-  min-height:500px;
-  padding:90px 7%;
-  display:flex;
-  align-items:center;
-  background:linear-gradient(120deg,#171717,#050505);
-}
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
 
-.hero h1{
-  font-size:55px;
-  max-width:650px;
-  margin-bottom:20px;
-}
+    .hero p {
+      color: #ccc;
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
 
-.hero p{
-  color:#bbb;
-  font-size:20px;
-  max-width:600px;
-  margin-bottom:30px;
-  line-height:1.5;
-}
+    .button {
+      display: inline-block;
+      background: #e50914;
+      color: white;
+      padding: 14px 22px;
+      border-radius: 6px;
+      text-decoration: none;
+    }
 
-.btn{
-  display:inline-block;
-  background:#e50914;
-  color:white;
-  text-decoration:none;
-  padding:15px 25px;
-  border-radius:7px;
-  font-size:18px;
-}
+    .movies {
+      padding: 50px 20px;
+    }
 
-.btn:hover{
-  background:#b20710;
-}
+    .movies h2 {
+      font-size: 32px;
+      margin-bottom: 30px;
+    }
 
-/* MOVIES */
-.movies{
-  padding:55px 6%;
-}
+    .search {
+      width: 100%;
+      max-width: 500px;
+      padding: 15px;
+      border: none;
+      border-radius: 6px;
+      margin-bottom: 30px;
+      font-size: 16px;
+    }
 
-.movies h2{
-  font-size:35px;
-  margin-bottom:25px;
-}
+    .movie-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
 
-/* SEARCH */
-.search{
-  width:100%;
-  max-width:550px;
-  padding:16px;
-  border:0;
-  border-radius:8px;
-  margin-bottom:35px;
-  font-size:17px;
-  outline:none;
-}
+    .movie {
+      background: #191919;
+      border-radius: 10px;
+      overflow: hidden;
+    }
 
-/* GRID */
-.movie-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
-  gap:25px;
-}
+    .poster {
+      height: 260px;
+      background: #292929;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 70px;
+    }
 
-/* CARD */
-.card{
-  background:#181818;
-  border-radius:12px;
-  overflow:hidden;
-  transition:0.
+    .movie-info {
+      padding: 18px;
+    }
