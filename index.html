@@ -40,7 +40,6 @@
             font-weight: bold;
         }
 
-        /* Search Bar Styling */
         .search-container {
             text-align: center;
             background: #222;
@@ -57,8 +56,31 @@
             outline: none;
         }
 
+        /* Category Filter Buttons Styling */
+        .filter-buttons {
+            text-align: center;
+            padding: 15px;
+            background: #181818;
+        }
+
+        .filter-btn {
+            background: #333;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            margin: 5px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .filter-btn:hover, .filter-btn.active {
+            background: #e50914;
+        }
+
         .hero {
-            padding: 50px 20px;
+            padding: 40px 20px;
             text-align: center;
             background: linear-gradient(135deg, #222, #000);
         }
@@ -92,29 +114,40 @@
             overflow: hidden;
             padding-bottom: 15px;
             text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .movie:hover {
+            transform: scale(1.03);
         }
 
         .poster {
             height: 240px;
+            width: 100%;
+            object-fit: cover;
             background: #333;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #aaa;
-            font-size: 18px;
         }
 
         .movie h3 {
-            margin: 12px 5px;
+            margin: 12px 5px 5px 5px;
+            font-size: 18px;
+        }
+
+        .movie span {
+            display: block;
+            color: #aaa;
+            font-size: 14px;
+            margin-bottom: 10px;
         }
 
         .watch {
             display: inline-block;
             background: #e50914;
             color: white;
-            padding: 9px 18px;
+            padding: 8px 16px;
             border-radius: 5px;
             text-decoration: none;
+            font-size: 14px;
         }
 
         footer {
@@ -142,6 +175,14 @@
         <input type="text" id="searchInput" placeholder="Search movies...">
     </div>
 
+    <!-- Category Filter Section -->
+    <div class="filter-buttons">
+        <button class="filter-btn active" onclick="filterCategory('all')">All</button>
+        <button class="filter-btn" onclick="filterCategory('action')">Action</button>
+        <button class="filter-btn" onclick="filterCategory('comedy')">Comedy</button>
+        <button class="filter-btn" onclick="filterCategory('drama')">Drama</button>
+    </div>
+
     <section class="hero">
         <h2>Welcome to My Movie Website</h2>
         <p>Watch and explore your favourite movies.</p>
@@ -151,27 +192,31 @@
         <h2>🔥 Latest Movies</h2>
         <div class="movie-grid" id="movieGrid">
             
-            <div class="movie">
-                <div class="poster">Movie Poster</div>
+            <div class="movie" data-category="action">
+                <img src="https://picsum.photos/300/400?random=1" alt="Movie Poster" class="poster">
                 <h3>Movie 1</h3>
+                <span>Action</span>
                 <a class="watch" href="#">Watch</a>
             </div>
 
-            <div class="movie">
-                <div class="poster">Movie Poster</div>
+            <div class="movie" data-category="comedy">
+                <img src="https://picsum.photos/300/400?random=2" alt="Movie Poster" class="poster">
                 <h3>Movie 2</h3>
+                <span>Comedy</span>
                 <a class="watch" href="#">Watch</a>
             </div>
 
-            <div class="movie">
-                <div class="poster">Movie Poster</div>
+            <div class="movie" data-category="drama">
+                <img src="https://picsum.photos/300/400?random=3" alt="Movie Poster" class="poster">
                 <h3>Movie 3</h3>
+                <span>Drama</span>
                 <a class="watch" href="#">Watch</a>
             </div>
 
-            <div class="movie">
-                <div class="poster">Movie Poster</div>
+            <div class="movie" data-category="action">
+                <img src="https://picsum.photos/300/400?random=4" alt="Movie Poster" class="poster">
                 <h3>Movie 4</h3>
+                <span>Action</span>
                 <a class="watch" href="#">Watch</a>
             </div>
 
@@ -183,6 +228,7 @@
     </footer>
 
     <script>
+        // Search Functionality
         const searchInput = document.getElementById('searchInput');
         const movieGrid = document.getElementById('movieGrid');
         const movies = movieGrid.getElementsByClassName('movie');
@@ -201,6 +247,22 @@
                 }
             }
         });
+
+        // Category Filter Functionality
+        function filterCategory(category) {
+            const buttons = document.querySelectorAll('.filter-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            for (let i = 0; i < movies.length; i++) {
+                let movieCategory = movies[i].getAttribute('data-category');
+                if (category === 'all' || movieCategory === category) {
+                    movies[i].style.display = "";
+                } else {
+                    movies[i].style.display = "none";
+                }
+            }
+        }
     </script>
 
 </body>
