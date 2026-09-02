@@ -1,169 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Movie Website</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-  <title>My Movie Website</title>
+        body {
+            background: #111;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+        header {
+            background: #e50914;
+            padding: 20px;
+            text-align: center;
+        }
 
-    body {
-      background: #111;
-      color: white;
-      font-family: Arial, sans-serif;
-    }
+        header h1 {
+            font-size: 28px;
+        }
 
-    header {
-      background: #e50914;
-      padding: 20px;
-      text-align: center;
-    }
+        nav {
+            background: #222;
+            padding: 12px;
+            text-align: center;
+        }
 
-    header h1 {
-      font-size: 28px;
-    }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
 
-    nav {
-      background: #222;
-      padding: 12px;
-      text-align: center;
-    }
+        /* Search Bar Styling */
+        .search-container {
+            text-align: center;
+            background: #222;
+            padding-bottom: 15px;
+        }
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 10px;
-      font-weight: bold;
-    }
+        .search-container input {
+            width: 80%;
+            max-width: 400px;
+            padding: 10px 15px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            outline: none;
+        }
 
-    .hero {
-      padding: 50px 20px;
-      text-align: center;
-      background: linear-gradient(135deg, #222, #000);
-    }
+        .hero {
+            padding: 50px 20px;
+            text-align: center;
+            background: linear-gradient(135deg, #222, #000);
+        }
 
-    .hero h2 {
-      font-size: 32px;
-      margin-bottom: 10px;
-    }
+        .hero h2 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
 
-    .hero p {
-      color: #ccc;
-    }
+        .hero p {
+            color: #ccc;
+        }
 
-    .movies {
-      padding: 25px 15px;
-    }
+        .movies {
+            padding: 25px 15px;
+        }
 
-    .movies h2 {
-      margin-bottom: 20px;
-    }
+        .movies h2 {
+            margin-bottom: 20px;
+        }
 
-    .movie-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 20px;
-    }
+        .movie-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+        }
 
-    .movie {
-      background: #222;
-      border-radius: 10px;
-      overflow: hidden;
-      padding-bottom: 15px;
-      text-align: center;
-    }
+        .movie {
+            background: #222;
+            border-radius: 10px;
+            overflow: hidden;
+            padding-bottom: 15px;
+            text-align: center;
+        }
 
-    .poster {
-      height: 240px;
-      background: #333;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #aaa;
-      font-size: 18px;
-    }
+        .poster {
+            height: 240px;
+            background: #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #aaa;
+            font-size: 18px;
+        }
 
-    .movie h3 {
-      margin: 12px 5px;
-    }
+        .movie h3 {
+            margin: 12px 5px;
+        }
 
-    .watch {
-      display: inline-block;
-      background: #e50914;
-      color: white;
-      padding: 9px 18px;
-      border-radius: 5px;
-      text-decoration: none;
-    }
+        .watch {
+            display: inline-block;
+            background: #e50914;
+            color: white;
+            padding: 9px 18px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
 
-    footer {
-      margin-top: 30px;
-      padding: 20px;
-      text-align: center;
-      background: #222;
-      color: #aaa;
-    }
-  </style>
+        footer {
+            margin-top: 30px;
+            padding: 20px;
+            text-align: center;
+            background: #222;
+            color: #aaa;
+        }
+    </style>
 </head>
-
 <body>
 
-  <header>
-    <h1>🎬 My Movie Website</h1>
-  </header>
+    <header>
+        <h1>🎬 My Movie Website</h1>
+    </header>
 
-  <nav>
-    <a href="#">Home</a>
-    <a href="#movies">Movies</a>
-    <a href="#about">About</a>
-  </nav>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#movies">Movies</a>
+        <a href="#about">About</a>
+    </nav>
 
-  <section class="hero">
-    <h2>Welcome to My Movie Website</h2>
-    <p>Watch and explore your favourite movies.</p>
-  </section>
-
-  <section class="movies" id="movies">
-    <h2>🔥 Latest Movies</h2>
-
-    <div class="movie-grid">
-
-      <div class="movie">
-        <div class="poster">Movie Poster</div>
-        <h3>Movie 1</h3>
-        <a class="watch" href="#">Watch</a>
-      </div>
-
-      <div class="movie">
-        <div class="poster">Movie Poster</div>
-        <h3>Movie 2</h3>
-        <a class="watch" href="#">Watch</a>
-      </div>
-
-      <div class="movie">
-        <div class="poster">Movie Poster</div>
-        <h3>Movie 3</h3>
-        <a class="watch" href="#">Watch</a>
-      </div>
-
-      <div class="movie">
-        <div class="poster">Movie Poster</div>
-        <h3>Movie 4</h3>
-        <a class="watch" href="#">Watch</a>
-      </div>
-
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search movies...">
     </div>
-  </section>
 
-  <footer id="about">
-    <p>© 2026 My Movie Website</p>
-  </footer>
+    <section class="hero">
+        <h2>Welcome to My Movie Website</h2>
+        <p>Watch and explore your favourite movies.</p>
+    </section>
+
+    <section class="movies" id="movies">
+        <h2>🔥 Latest Movies</h2>
+        <div class="movie-grid" id="movieGrid">
+            
+            <div class="movie">
+                <div class="poster">Movie Poster</div>
+                <h3>Movie 1</h3>
+                <a class="watch" href="#">Watch</a>
+            </div>
+
+            <div class="movie">
+                <div class="poster">Movie Poster</div>
+                <h3>Movie 2</h3>
+                <a class="watch" href="#">Watch</a>
+            </div>
+
+            <div class="movie">
+                <div class="poster">Movie Poster</div>
+                <h3>Movie 3</h3>
+                <a class="watch" href="#">Watch</a>
+            </div>
+
+            <div class="movie">
+                <div class="poster">Movie Poster</div>
+                <h3>Movie 4</h3>
+                <a class="watch" href="#">Watch</a>
+            </div>
+
+        </div>
+    </section>
+
+    <footer id="about">
+        <p>&copy; 2026 My Movie Website</p>
+    </footer>
+
+    <script>
+        const searchInput = document.getElementById('searchInput');
+        const movieGrid = document.getElementById('movieGrid');
+        const movies = movieGrid.getElementsByClassName('movie');
+
+        searchInput.addEventListener('keyup', function() {
+            let filter = searchInput.value.toLowerCase();
+            
+            for (let i = 0; i < movies.length; i++) {
+                let title = movies[i].getElementsByTagName('h3')[0];
+                let textValue = title.textContent || title.innerText;
+                
+                if (textValue.toLowerCase().indexOf(filter) > -1) {
+                    movies[i].style.display = "";
+                } else {
+                    movies[i].style.display = "none";
+                }
+            }
+        });
+    </script>
 
 </body>
 </html>
