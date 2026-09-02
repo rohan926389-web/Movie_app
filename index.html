@@ -192,78 +192,9 @@
         <h2>🔥 Latest Movies</h2>
         <div class="movie-grid" id="movieGrid">
             
-            <div class="movie" data-category="action">
-                <img src="https://picsum.photos/300/400?random=1" alt="Movie Poster" class="poster">
-                <h3>Movie 1</h3>
-                <span>Action</span>
-                <a class="watch" href="#">Watch</a>
-            </div>
-
-            <div class="movie" data-category="comedy">
-                <img src="https://picsum.photos/300/400?random=2" alt="Movie Poster" class="poster">
-                <h3>Movie 2</h3>
-                <span>Comedy</span>
-                <a class="watch" href="#">Watch</a>
-            </div>
-
-            <div class="movie" data-category="drama">
-                <img src="https://picsum.photos/300/400?random=3" alt="Movie Poster" class="poster">
-                <h3>Movie 3</h3>
-                <span>Drama</span>
-                <a class="watch" href="#">Watch</a>
-            </div>
-
-            <div class="movie" data-category="action">
-                <img src="https://picsum.photos/300/400?random=4" alt="Movie Poster" class="poster">
-                <h3>Movie 4</h3>
-                <span>Action</span>
-                <a class="watch" href="#">Watch</a>
-            </div>
-
-        </div>
-    </section>
-
-    <footer id="about">
-        <p>&copy; 2026 My Movie Website</p>
-    </footer>
-
-    <script>
-        // Search Functionality
-        const searchInput = document.getElementById('searchInput');
-        const movieGrid = document.getElementById('movieGrid');
-        const movies = movieGrid.getElementsByClassName('movie');
-
-        searchInput.addEventListener('keyup', function() {
-            let filter = searchInput.value.toLowerCase();
-            
-            for (let i = 0; i < movies.length; i++) {
-                let title = movies[i].getElementsByTagName('h3')[0];
-                let textValue = title.textContent || title.innerText;
-                
-                if (textValue.toLowerCase().indexOf(filter) > -1) {
-                    movies[i].style.display = "";
-                } else {
-                    movies[i].style.display = "none";
-                }
-            }
-        });
-
-        // Category Filter Functionality
-        function filterCategory(category) {
-            const buttons = document.querySelectorAll('.filter-btn');
-            buttons.forEach(btn => btn.classList.remove('active'));
-            event.target.classList.add('active');
-
-            for (let i = 0; i < movies.length; i++) {
-                let movieCategory = movies[i].getAttribute('data-category');
-                if (category === 'all' || movieCategory === category) {
-                    movies[i].style.display = "";
-                } else {
-                    movies[i].style.display = "none";
-                }
-            }
-        }
-    </script>
-
-</body>
-</html>
+<div class="movie" data-category="drama">
+    <div class="movie" data-category="drama">
+    <iframe width="100%" height="240" src="https://www.youtube.com/embed/zPBxZnrHdsc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <h3>Toxic Movie (2026)</h3>
+    <span>Action / Drama</span>
+</div>
